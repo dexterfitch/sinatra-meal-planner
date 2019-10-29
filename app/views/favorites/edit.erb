@@ -1,0 +1,29 @@
+<h1>Edit Custom Favorite</h1>
+
+<% if current_user == nil %>
+
+  <p>Please <a href="/login">login</a>!</p>
+
+<% else %>
+
+  <form action="/favorites/<%= @favorite.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <p>
+      <label for="title">Title:</label><br>
+      <input class="input-100" type="text" name="title" id="title" value="<%= @favorite.title %>">
+    </p>
+
+    <p>
+      <label for="href">URL:</label><br>
+      <input class="input-100" type="text" name="href" id="href" value="<%= @favorite.href %>">
+    </p>
+
+    <p>
+      <label for="thumbnail">Thumbnail URL:</label><br>
+      <input class="input-100" type="text" name="thumbnail" id="thumbnail" value="<%= @favorite.thumbnail %>">
+    </p>
+
+    <input class="btn btn-secondary margin-top-2x" type="submit" name="Submit">
+  </form>
+
+<% end %>

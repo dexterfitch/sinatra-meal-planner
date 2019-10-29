@@ -1,0 +1,17 @@
+<h1>Edit Profile</h1>
+
+<form action="/users" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+
+  <p>
+    <label for="username">Username:</label>
+    <input class="input-100" type="text" name="username" id="username" value="<%= current_user.username %>">
+  </p>
+
+  <p>
+    <label for="password">Password:</label>
+    <input class="input-100" type="password" name="password" id="password" placeholder="Enter New Password">
+  </p>
+
+  <input class="btn btn-secondary margin-top-2x" type="submit" name="Edit Profile">
+</form>

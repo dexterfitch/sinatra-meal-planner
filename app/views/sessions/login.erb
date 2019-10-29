@@ -1,0 +1,23 @@
+<h1>Login</h1>
+
+<% if session[:username] == nil %>
+
+  <form action="/sessions" method="POST">
+    <p>
+      <label for="username">Username:</label>
+      <input class="input-100" type="text" name="username" id="username">
+    </p>
+
+    <p>
+      <label for="password">Password:</label>
+      <input class="input-100" type="password" name="password" id="password">
+    </p>
+
+    <input class="btn btn-secondary margin-top-2x" type="submit" name="Submit">
+  </form>
+
+<% else %>
+
+  <p>You are already logged in, <%= current_user.username %>!</p>
+  <a class="btn btn-secondary margin-top-2x" href="/logout">Logout</a>
+<% end %>

@@ -1,0 +1,78 @@
+/* Palette */
+/* Orange-Red: #F63E02 */
+/* Yellow: #F3E02C */
+/* Dark Turquoise: #297373 */
+/* Very Pale Green: #DEEFB7 */
+/* Pale Teal: #98DFAF */
+/* Very Pale Teal: #E5F3DE */
+
+/* Bumpers */
+.margin-x { margin: 0 !important; }
+.margin-top-1x { margin-top: 1em !important; }
+.margin-top-2x { margin-top: 2em !important; }
+.margin-bottom-1x { margin-bottom: 1em !important; }
+.margin-right-1x { margin-right: 1em !important; }
+.margin-left_25x { margin-left: 0.25em !important; }
+.margin-left-1x { margin-left: 1em !important; }
+.padding-2x { padding: 2em !important; }
+
+/* Bootstrap Overrides */
+.bg-primary { background-color: #F63E02 !important; color: #F3E02C !important; }
+.btn-primary { background-color: #F63E02 !important; border-color: #F63E02 !important; color: #F3E02C !important; }
+.bg-secondary { background-color: #297373 !important; color: #DEEFB7 !important; }
+.btn-secondary { background-color: #DEEFB7 !important; border-color: #DEEFB7 !important; color: #297373 !important; }
+.text-primary { color: #F63E02 !important; }
+.navbar-dark .navbar-nav .nav-link { color: rgba(255, 255, 255, 0.85); }
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover { color: rgba(255,255,255, 1); }
+
+/* Text */
+body {
+  background-color: #E5F3DE !important;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Shrikhand', cursive;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 800;
+}
+a {
+  color: #F3E02C;
+}
+a:hover {
+  color: #98DFAF;
+  text-decoration: none;
+}
+
+/* Nav */
+.navbar-brand {
+  color: #F3E02C !important;
+}
+.navbar-brand .h3 {
+  vertical-align: text-top;
+}
+.navbar-brand .list-inline-item:not(:last-child) {
+  margin-right: 0;
+}
+
+/* Flash Errors */
+.flash {
+  margin-bottom: 2em;
+  padding: 2em;
+  background: #F3E02C;
+  border-radius: 50px 10px;
+  color: #297373;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: #98DFAF 0.25px 8px 0;
+}
+
+/* Images */
+.thumbnail { width: 75px; height: 75px; overflow: hidden; }
+.thumbnail-image { width: 150%; }
+
+/* Inputs */
+.input-100 { width: 100%; }
