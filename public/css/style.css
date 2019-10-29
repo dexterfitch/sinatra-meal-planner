@@ -72,7 +72,8 @@ a:hover {
 
 /* Images */
 .thumbnail { width: 75px; height: 75px; overflow: hidden; }
-.thumbnail-image { width: 150%; }
+.thumbnail-image { width: 100%; }
+.intro-image { max-width: 500px; }
 
 /* Inputs */
 .input-100 { width: 100%; }

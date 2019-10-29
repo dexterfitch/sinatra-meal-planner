@@ -1,7 +1,11 @@
-<% if logged_in? %>
-  <h2>Welcome back to the Meal Planner, <%= session[:username].capitalize %>!</h2>
-<% else %>
-  <h2>Welcome to the Meal Planner!</h2>
-<% end %>
+<div class="row">
+  <div class="col-12">
+    <% if logged_in? %>
+      <h2>Welcome back to the Meal Planner, <%= session[:username].capitalize %>!</h2>
+    <% else %>
+      <h2>Welcome to the Meal Planner!</h2>
+    <% end %>
 
-<img src="">
+    <img class="img-fluid mx-auto d-block intro-image" src="/img/mealplanner_intro.png" alt="Welcome to Mealplanner"></div>
+  </div>
+</div>

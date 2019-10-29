@@ -22,9 +22,9 @@
           <li class="media margin-bottom-1x">
             <div class="thumbnail margin-right-1x">
               <% if favorite.thumbnail.length == 0 %>
-                <img class="thumbnail-image" src="/img/mealplanner_thumb.png">
+                <img class="thumbnail-image" src="/img/mealplanner_thumbnail.png" alt="<%= favorite.title %>">
               <% else %>
-                <img class="thumbnail-image" src="<%= favorite.thumbnail %>">
+                <img class="thumbnail-image" src="<%= favorite.thumbnail %>" alt="<%= favorite.title %>">
               <% end %>
             </div>
             <div class="media-body">
