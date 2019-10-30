@@ -33,6 +33,7 @@ class UsersController < ApplicationController
       redirect '/users/edit'
     else
       @user.username = params[:username]
+      current_user.username = params[:username]
       @user.password = params[:password]
       @user.save
       redirect '/'

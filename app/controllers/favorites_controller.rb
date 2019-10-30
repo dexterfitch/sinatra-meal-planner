@@ -6,11 +6,7 @@ class FavoritesController < ApplicationController
   end
 
   post '/favorites' do
-    @favorite = Favorite.new
-    @favorite.title = params[:title]
-    @favorite.href = params[:href]
-    @favorite.thumbnail = params[:thumbnail]
-    @favorite.user_id = current_user.id
+    @favorite = current_user.favorites.build(params)
     if !Favorite.find_by(:href => @favorite.href)
       @favorite.save
       redirect '/favorites'
