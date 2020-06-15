@@ -14,7 +14,7 @@ To use the app locally, use git to clone to your device. Open a terminal window,
 
 ### Contributor's Guide
 
-Contributions are welcome! Please submit a pull request for review, with a detailed comment.
+Contributions are welcome! Please create a new branch and submit a pull request for review, with a detailed comment.
 
 ------
 
