@@ -10,7 +10,7 @@
   <body>
  
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <a class="navbar-brand" href="/">
+<!--       <a class="navbar-brand" href="/">
         <ul class="list-inline margin-x">
           <li class="list-inline-item">
             <span class="fa-stack">
@@ -22,13 +22,13 @@
             <span class="h3 margin-x">Meal Planner</span>
           </li>
         </ul>
-      </a>
+      </a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
           <% if !logged_in? %>
             <li class="nav-item">
               <a class="nav-link" href="/signup">Signup</a>
@@ -44,8 +44,6 @@
               <a class="nav-link" href="/users/edit">Profile</a>
             </li>
           <% end %>
-        </ul>
-        <ul class="navbar-nav ml-auto">
           <% if logged_in? %>
             <li class="nav-item">
               <a class="nav-link" href="/logout">Logout</a>
