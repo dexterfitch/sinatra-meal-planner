@@ -1,10 +1,9 @@
 /* Palette */
-/* Orange-Red: #F63E02 */
-/* Yellow: #F3E02C */
-/* Dark Turquoise: #297373 */
-/* Very Pale Green: #DEEFB7 */
-/* Pale Teal: #98DFAF */
-/* Very Pale Teal: #E5F3DE */
+
+/* Ghost White: #F7F7FF */
+/* Chinese Red: #A33E2C */
+/* Jonquil: #F0C808 */
+/* Blue Sapphire: #086788 */
 
 /* Bumpers */
 .margin-x { margin: 0 !important; }
@@ -16,18 +15,14 @@
 .margin-left-1x { margin-left: 1em !important; }
 .padding-2x { padding: 2em !important; }
 
-/* Bootstrap Overrides */
-.bg-primary { background-color: #F63E02 !important; color: #F3E02C !important; }
-.btn-primary { background-color: #F63E02 !important; border-color: #F63E02 !important; color: #F3E02C !important; }
-.bg-secondary { background-color: #297373 !important; color: #DEEFB7 !important; }
-.btn-secondary { background-color: #DEEFB7 !important; border-color: #DEEFB7 !important; color: #297373 !important; }
-.text-primary { color: #F63E02 !important; }
-.navbar-dark .navbar-nav .nav-link { color: rgba(255, 255, 255, 0.85); }
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover { color: rgba(255,255,255, 1); }
+/* Bootstrap Element Overrides */
+.bg-primary { background-color: #F0C808 !important; color: #F7F7FF !important; }
+.btn-primary { background-color: #F0C808 !important; border-color: #F0C808 !important; color: #F7F7FF !important; }
+.text-primary { color: #F0C808 !important; }
 
 /* Text */
 body {
-  background-color: #E5F3DE !important;
+  background-color: #F0C808;
   font-family: 'Assistant', sans-serif;
   font-size: 16px;
 }
@@ -39,35 +34,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 a {
-  color: #F3E02C;
+  color: #F7F7FF;
 }
 a:hover {
-  color: #98DFAF;
+  color: #A33E2C;
   text-decoration: none;
 }
 
 /* Nav */
-.navbar-brand {
-  color: #F3E02C !important;
-}
-.navbar-brand .h3 {
-  vertical-align: text-top;
-}
-.navbar-brand .list-inline-item:not(:last-child) {
-  margin-right: 0;
-}
+.navbar-light .navbar-nav .nav-link { color: rgba(247, 247, 255, 0.85); }
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover { color: rgba(247, 247, 255, 1); }
+
 
 /* Flash Errors */
 .flash {
   margin-bottom: 2em;
   padding: 2em;
-  background: #F3E02C;
+  background: #F7F7FF;
   border-radius: 50px 10px;
-  color: #297373;
+  color: #A33E2C;
   text-align: center;
   font-size: 18px;
   font-weight: 800;
-  box-shadow: #98DFAF 0.25px 8px 0;
+  box-shadow: #A33E2C 0.25px 8px 0;
 }
 
 /* Images */
