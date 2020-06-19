@@ -40,6 +40,12 @@ a:hover {
   color: #A33E2C;
   text-decoration: none;
 }
+.super-intro-heading {
+  font-family: 'Assistant', sans-serif;
+}
+.intro-heading {
+
+}
 
 /* Nav */
 .navbar-light .navbar-nav .nav-link { color: rgba(247, 247, 255, 0.85); }
