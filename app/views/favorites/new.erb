@@ -1,28 +1,36 @@
-<h1>Create Custom Favorite</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
 
-<% if current_user == nil %>
+      <h1>Create Custom Favorite</h1>
 
-  <p>Please <a href="/login">login</a>!</p>
+      <% if logged_in? %>
 
-<% else %>
+        <form action="/favorites" method="POST">
+          <p>
+            <label for="title">Title:</label><br>
+            <input class="input-100" type="text" name="title" id="title">
+          </p>
 
-  <form action="/favorites" method="POST">
-    <p>
-      <label for="title">Title:</label><br>
-      <input class="input-100" type="text" name="title" id="title">
-    </p>
+          <p>
+            <label for="href">URL:</label><br>
+            <input class="input-100" type="text" name="href" id="href">
+          </p>
 
-    <p>
-      <label for="href">URL:</label><br>
-      <input class="input-100" type="text" name="href" id="href">
-    </p>
+          <p>
+            <label for="thumbnail">Thumbnail URL:</label><br>
+            <input class="input-100" type="text" name="thumbnail" id="thumbnail">
+          </p>
 
-    <p>
-      <label for="thumbnail">Thumbnail URL:</label><br>
-      <input class="input-100" type="text" name="thumbnail" id="thumbnail">
-    </p>
+          <input class="btn btn-secondary margin-top-2x" type="submit" value="Submit">
+        </form>
 
-    <input class="btn btn-secondary margin-top-2x" type="submit" value="Submit">
-  </form>
+      <% else %>
 
-<% end %>
+        <p>Please <a href="/login">login</a>!</p>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

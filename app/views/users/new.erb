@@ -1,24 +1,32 @@
-<h1>Signup</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
 
-<% if session[:username] == nil %>
+      <h1>Signup</h1>
 
-  <form action="/users" method="POST">
-    <p>
-      <label for="username">Username:</label>
-      <input class="input-100" type="text" name="username" id="username">
-    </p>
+      <% if logged_in? %>
 
-    <p>
-      <label for="password">Password:</label>
-      <input class="input-100" type="password" name="password" id="password">
-    </p>
+        <p>You are already logged in!</p>
+        <a class="btn btn-secondary margin-top-2x" href="/logout">Logout?</a>
 
-    <input class="btn btn-secondary margin-top-2x" type="submit" value="Submit">
-  </form>
+      <% else %>
 
-<% else %>
+        <form action="/users" method="POST">
+          <p>
+            <label for="username">Username:</label>
+            <input class="input-100" type="text" name="username" id="username">
+          </p>
+          
+          <p>
+            <label for="password">Password:</label>
+            <input class="input-100" type="password" name="password" id="password">
+          </p>
+          
+          <input class="btn btn-secondary margin-top-2x" type="submit" value="Submit">
+        </form>
 
-  <p>You are already logged in!</p>
-  <a class="btn btn-secondary margin-top-2x" href="/logout">Logout?</a>
-  
-<% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -17,8 +17,16 @@ class ApplicationController < Sinatra::Base
  
   helpers do
 
-    def valid_data?(username, password)
-      if !User.find_by(:username => username) && password.length > 5
+    def valid_username?(username)
+      if !User.find_by(:username => username)
+        true
+      else
+        false
+      end
+    end
+
+    def valid_password?(password)
+      if password.length > 5
         true
       else
         false

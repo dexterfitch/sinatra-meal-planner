@@ -13,30 +13,20 @@ class UsersController < ApplicationController
     @user.username = params[:username]
     @user.password = params[:password]
 
-    if valid_data?(@user.username, @user.password)
+    if valid_username?(@user.username) && valid_password?(@user.password)
       @user.save
       redirect '/login'
     else
-      flash[:error] = "Username already exists, or password does not meet minimum character length (6), please try again."
-      redirect '/signup'
-    end
-  end
-
-  put '/users' do
-    @user = User.find(current_user.id)
-
-    if User.find_by(:username => params[:username]) && current_user.username != params[:username]
-      flash[:error] = "Username is taken, please try again"
-      redirect '/users/edit'
-    elsif params[:password].length < 6
-      flash[:error] = "Password isn't long enough, minimum 6 characters"
-      redirect '/users/edit'
-    else
-      @user.username = params[:username]
-      current_user.username = params[:username]
-      @user.password = params[:password]
-      @user.save
-      redirect '/'
+      if !valid_username?(@user.username) && !valid_password?(@user.password)
+        flash[:error] = "Username already exists and password does not meet minimum character length (6), please try again."
+        redirect '/signup'
+      elsif !valid_password?(@user.password)
+        flash[:error] = "Password does not meet minimum character length (6), please try again."
+        redirect '/signup'
+      else
+        flash[:error] = "Username already exists, please try again."
+        redirect '/signup'
+      end
     end
   end
   
