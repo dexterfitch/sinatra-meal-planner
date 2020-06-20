@@ -1,9 +1,10 @@
 /* Palette */
-
-/* Ghost White: #F7F7FF */
-/* Chinese Red: #A33E2C */
-/* Jonquil: #F0C808 */
-/* Blue Sapphire: #086788 */
+/* 
+    Ghost White: #F7F7FF
+    Chinese Red: #A33E2C
+    Jonquil: #F0C808
+    Blue Sapphire: #086788
+*/
 
 /* Bumpers */
 .margin-x { margin: 0 !important; }
@@ -23,14 +24,15 @@
 /* Text */
 body {
   background-color: #F0C808;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Spicy Rice', cursive;  
 }
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Oswald', sans-serif;
+
   font-weight: 800;
 }
 a {
@@ -40,16 +42,60 @@ a:hover {
   color: #A33E2C;
   text-decoration: none;
 }
+.intro-heading-container {
+  position: relative;
+  padding-left: 40px;
+}
 .super-intro-heading {
-  font-family: 'Assistant', sans-serif;
+  font-size: 80px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
 }
 .intro-heading {
-
+  font-size: 250px;
+  line-height: 0.8;
+}
+.intro-heading-top {
+  color: #F0C808;
+  position: absolute;
+  z-index: 1;
+  text-stroke: 3px #000;
+  -webkit-text-stroke: 3px #000;
+}
+.intro-heading-bottom {
+  text-shadow: 
+    -2px 1px #A33E2C,
+    -4px 2px #A33E2C,
+    -6px 4px #A33E2C,
+    -8px 5px #A33E2C,
+    -10px 6px #A33E2C,
+    -12px 7px #A33E2C,
+    -14px 8px #000000,
+    -16px 9px #F0C808,
+    -18px 10px #F0C808,
+    -20px 11px #F0C808,
+    -22px 12px #F0C808,
+    -24px 13px #F0C808,
+    -28px 14px #F0C808,
+    -30px 15px #000000,
+    -32px 16px #086788,
+    -34px 17px #086788,
+    -36px 18px #086788,
+    -38px 20px #086788,
+    -40px 22px #086788,
+    -42px 24px #086788,
+    -44px 25px #000000
+  ;
 }
 
 /* Nav */
-.navbar-light .navbar-nav .nav-link { color: rgba(247, 247, 255, 0.85); }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover { color: rgba(247, 247, 255, 1); }
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link { color: #000000; }
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover { color: #A33E2C; }
+
 
 
 /* Flash Errors */

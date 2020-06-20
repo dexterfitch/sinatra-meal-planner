@@ -1,8 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <h2 class="super-intro-heading">Sinatra</h2>
-      <h1 class="intro-heading">Meal Planner</h1>
+      <h2 class="h2 super-intro-heading">Sinatra</h2>
+      <div class="intro-heading-container">
+        <h1 class="intro-heading intro-heading-top">Meal Planner</h1>
+        <h1 class="intro-heading intro-heading-bottom">Meal Planner</h1>
+      </div>
 
       <% if logged_in? %>
         <p>Hey, <%= session[:username].capitalize %>. Welcome back.</p>
