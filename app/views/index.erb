@@ -8,9 +8,10 @@
       </div>
 
       <% if logged_in? %>
-        <p>Hey, <%= session[:username].capitalize %>. Welcome back.</p>
+        <div class="intro-greeting margin-bottom-5x">
+          <p>Hey, <%= session[:username].capitalize %>. Welcome back.</p>
+        </div>
       <% end %>
-      <img class="img-fluid mx-auto d-block intro-image" src="/img/mealplanner_intro.png" alt="Welcome to Mealplanner"></div>
     </div>
   </div>
 </div>

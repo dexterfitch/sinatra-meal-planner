@@ -4,47 +4,37 @@
       <h1><%= session[:username].capitalize %>'s Favorites</h1>
     </div>
     <div class="col-2 text-right">
-      <a class="btn btn-secondary" href="/favorites/new" data-toggle="tooltip" data-placement="left" title="Create Custom Favorite">
+      <a class="btn btn-primary" href="/favorites/new" data-toggle="tooltip" data-placement="left" title="Create Custom Favorite">
         <i class="fas fa-plus fa-lg"></i>
       </a>
     </div>
   </div>
 
   <div class="row margin-top-1x">
-    <div class ="col-12">
-
-      <ul class="list-unstyled">
-
-        <% if @favorites.length == 0 %>
-          <h4>Your favorites will appear here. Add some now!</h4>
-        <% else %>
-          <% @favorites.each do |favorite| %>
-
-            <li class="media margin-bottom-1x">
-              <div class="thumbnail margin-right-1x">
-                <% if favorite.thumbnail.length == 0 %>
-                  <img class="thumbnail-image" src="/img/mealplanner_thumbnail.png" alt="<%= favorite.title %>">
-                <% else %>
-                  <img class="thumbnail-image" src="<%= favorite.thumbnail %>" alt="<%= favorite.title %>">
-                <% end %>
-              </div>
-              <div class="media-body">
-                <a href="<%= favorite.href %>">
-                  <h3 class="h3"><%= favorite.title %></h3>
-                </a>
-                <p class="small margin-x">
-                  <i>( <%= favorite.href %> )</i>
-                  <a href="/favorites/<%= favorite.id %>/edit" data-toggle="tooltip" data-placement="right" title="Edit Favorite"><i class="margin-left-1x fas fa-edit fa-sm"></i></a> 
-                  <a href="/favorites/<%= favorite.id %>/delete" data-toggle="tooltip" data-placement="right" title="Delete Favorite"><i class="margin-left_25x fas fa-trash fa-sm"></i></a>
-                </p>
-              </div>
-            </li>
-
-          <% end %>
-        <% end %>
-
-      </ul>
-
-    </div>
+    <% if @favorites.length == 0 %>
+      <div class ="col-12">
+        <h4 class="h4">Your favorites will appear here. Add some now!</h4>
+      </div>
+    <% else %>
+      <% @favorites.each do |favorite| %>
+        <div class="col-3">
+          <div class="favourite-recipe-card padding-1x margin-bottom-2x">
+            <% if favorite.thumbnail.length == 0 %>
+              <img class="img-fluid" src="/img/mealplanner_thumbnail.png" alt="<%= favorite.title %>">
+            <% else %>
+              <img class="img-fluid" src="<%= favorite.thumbnail %>" alt="<%= favorite.title %>">
+            <% end %>
+            <a href="<%= favorite.href %>">
+              <h3 class="h3 margin-top_5x"><%= favorite.title %></h3>
+            </a>
+            <p class="small margin-x">
+              <i>( <%= favorite.href %> )</i>
+              <a href="/favorites/<%= favorite.id %>/edit" data-toggle="tooltip" data-placement="right" title="Edit Favorite"><i class="margin-left-1x fas fa-edit fa-sm"></i></a> 
+              <a href="/favorites/<%= favorite.id %>/delete" data-toggle="tooltip" data-placement="right" title="Delete Favorite"><i class="margin-left_25x fas fa-trash fa-sm"></i></a>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

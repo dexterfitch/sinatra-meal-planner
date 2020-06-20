@@ -8,17 +8,19 @@
 
 /* Bumpers */
 .margin-x { margin: 0 !important; }
+.margin-top_5x { margin-top: 0.5em !important; }
 .margin-top-1x { margin-top: 1em !important; }
 .margin-top-2x { margin-top: 2em !important; }
 .margin-bottom-1x { margin-bottom: 1em !important; }
+.margin-bottom-2x { margin-bottom: 2em !important; }
+.margin-bottom-5x { margin-top: 5em !important; }
 .margin-right-1x { margin-right: 1em !important; }
 .margin-left_25x { margin-left: 0.25em !important; }
 .margin-left-1x { margin-left: 1em !important; }
-.padding-2x { padding: 2em !important; }
+.padding-1x { padding: 1em; }
 
 /* Bootstrap Element Overrides */
-.bg-primary { background-color: #F0C808 !important; color: #F7F7FF !important; }
-.btn-primary { background-color: #F0C808 !important; border-color: #F0C808 !important; color: #F7F7FF !important; }
+.btn-primary { background-color: #A33E2C !important; border-color: #A33E2C !important; color: #F0C808 !important; }
 .text-primary { color: #F0C808 !important; }
 
 /* Text */
@@ -30,32 +32,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Spicy Rice', cursive;  
 }
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Oswald', sans-serif;
-
-  font-weight: 800;
-}
-a {
-  color: #F7F7FF;
-}
-a:hover {
-  color: #A33E2C;
-  text-decoration: none;
-}
-.intro-heading-container {
-  position: relative;
-  padding-left: 40px;
-}
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Oswald', sans-serif; font-weight: 800; }
+a { color: #A33E2C; }
+a:hover { color: #086788; text-decoration: none; }
+.intro-heading-container { position: relative; padding-left: 40px; }
 .super-intro-heading {
   font-size: 80px;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   line-height: 1;
 }
-.intro-heading {
-  font-size: 250px;
-  line-height: 0.8;
-}
+.intro-heading { font-size: 250px; line-height: 0.8; }
 .intro-heading-top {
   color: #F0C808;
   position: absolute;
@@ -117,3 +104,23 @@ a:hover {
 
 /* Inputs */
 .input-100 { width: 100%; }
+
+/* Panels */
+.intro-greeting {
+  padding: 1em 2em 0.25em 2em;
+  background: #A33E2C;
+  border: 2px solid #000000;
+  border-radius: 50px 10px;
+  color: #F7F7FF;
+  font-size: 18px;
+  box-shadow: #086788 0.25px 8px 0;
+  max-width: 400px;
+}
+.favourite-recipe-card {
+  background: #F7F7FF;
+  border-radius: 10px;
+}
+
+.favourite-recipe-card img {
+  border-radius: 10px;
+}
